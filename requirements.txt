@@ -1,0 +1,10 @@
+requests
+psutil
+coloredlogs
+dhooks
+pyautogui
+keyboard
+pyHook
+httplib2
+opencv-python
+pyinstaller>=5.0
