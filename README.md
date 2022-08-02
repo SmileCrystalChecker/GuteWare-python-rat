@@ -45,8 +45,8 @@ Next, go to line 392 and if you'd like, enable the scare settings.
 
 ## <a id="skids"></a>🤓 〢 Dear Skids
 
-We all know you cant code for shit but skidding peoples hard work, is just not it \
-Profiting from it is just even more f\*cked up \
+We all know you cant code for shit but skidding peoples hard work, is just not it \n
+Profiting from it is just even more f\*cked up \n
 I hope you end up on the streets begging for spare change
 
 <br>
