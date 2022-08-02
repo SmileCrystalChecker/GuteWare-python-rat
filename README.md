@@ -2,8 +2,9 @@
 A pretty okay python rat
 This rat is also very beginner friendly, with notes to everything to help you understand even if you don't know how to code!
 
-Features List:
+#2.0 Release:
 #
+
 [+] PC Info Grabbing
 
 [+] Info To Discord Webhook
@@ -22,7 +23,7 @@ Features List:
 
 #
 # GuteWare 2.1 Release
-#
+
 [+] Keylogger
 
 [+] Camera Recorder
