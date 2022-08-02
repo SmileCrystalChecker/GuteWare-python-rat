@@ -1,4 +1,4 @@
-![ezgif com-gif-maker (5)]([https://user-images.githubusercontent.com/93240515/181876930-cace13ac-a5f7-4964-bd3b-82b2230c64a8.gif](https://cdn.discordapp.com/attachments/920469526158639137/1003915338171301898/unknown.png))
+![ezgif com-gif-maker (5)](https://cdn.discordapp.com/attachments/920469526158639137/1003915338171301898/unknown.png)
 
 # GuteWare Python RAT
 A pretty okay python rat
