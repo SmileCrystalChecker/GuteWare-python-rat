@@ -52,7 +52,7 @@ Paste your webhook in like shown in the video, then go to line 89 in main.py, fo
 
 then, set a different webhook for the keylogger & camera recorder webhook (this is necessary because it floods the chat)
 
-Next, go to line 392 and if you'd like, enable the scare settings.
+Next, go to line 515 and if you'd like, enable the scare settings.
 
 ## <a id="skids"></a>🤓 〢 Dear Skids
 
