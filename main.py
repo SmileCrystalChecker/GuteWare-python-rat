@@ -88,7 +88,13 @@ os.system('color')
 OperatingSystem = platform.system()
 OSRelease = platform.release()
 OSVersion = platform.version()
-Version = "2.1"
+
+# you can ignore this, I just put it here because I forget to update the version before uploading it lmao
+
+data = requests.get(
+    'https://gist.github.com/dacianfan/dddcc86834cfb3ad7270e6562f264eb1/raw')
+for line in data:
+    Version = line.decode()
 Creator = "Gute Nacht"
 link = "https://github.com/dacianfan/GuteWare-python-rat"
 
