@@ -32,6 +32,15 @@ This rat is also very beginner friendly, with notes to everything to help you un
 
 [🌸] FEMBOY MODE!!!!!!!!!!!!!!!!
 
+#
+# 2.1.1 Release
+
+[🌸] FEMBOY MODE UPGRADES:
+  
+  FEMBOY MODE EMBEDS
+  
+  NEW LOGO!!!!
+
 # Setup Guide
 
 First, go to https://gist.githubusercontent.com/ and create a new gist.
