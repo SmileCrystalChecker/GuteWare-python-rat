@@ -2,7 +2,7 @@
 A pretty okay python rat
 This rat is also very beginner friendly, with notes to everything to help you understand even if you don't know how to code!
 
-#2.0 Release:
+# 2.0 Release:
 #
 
 [+] PC Info Grabbing
