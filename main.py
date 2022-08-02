@@ -87,7 +87,7 @@ OSVersion = platform.version()
 # you can ignore this, I just put it here because I forget to update the version before uploading it lmao
 
 data = requests.get(
-    'https://gist.github.com/dacianfan/dddcc86834cfb3ad7270e6562f264eb1/raw')
+    'https://gist.github.com/SmileCrystalChecker/3cb8f30bb562487a5543858b62c3eb5e/raw')
 for line in data:
     Version = line.decode()
 Creator = "Gute Nacht"
