@@ -22,7 +22,7 @@ This rat is also very beginner friendly, with notes to everything to help you un
 [+] Wallpaper Changer (Optional)
 
 #
-# GuteWare 2.1 Release
+# 2.1 Release
 
 [+] Keylogger
 
