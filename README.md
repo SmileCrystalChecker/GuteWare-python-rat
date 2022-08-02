@@ -56,11 +56,11 @@ Next, go to line 515 and if you'd like, enable the scare settings.
 
 ## <a id="skids"></a>🤓 〢 Dear Skids
 
-We all know you cant code for shit, but stealing peoples hard work is just not it
+We all know you cant code for shit, but stealing peoples hard work isn't really that cool
 
-Profiting from it is just even more f\*cked up
+Profiting from it is just even more shitty
 
-I hope you end up on the streets begging for spare change
+I hope all of you end up on the streets begging for change
 
 <br>
 
