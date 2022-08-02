@@ -1,6 +1,6 @@
 # GuteWare Python RAT
 A pretty okay python rat
-
+This rat is also very beginner friendly, with notes to everything to help you understand even if you don't know how to code!![banner](https://user-images.githubusercontent.com/93240515/181876695-978b5c1b-3427-4208-8992-b071aa61bc2f.png)
 Features List:
 #
 [+] PC Info Grabbing
@@ -29,8 +29,6 @@ Features List:
 [+] Much More Customizable Options
 
 [🌸] FEMBOY MODE!!!!!!!!!!!!!!!!
-
-This rat is also very beginner friendly, with notes to everything to help you understand even if you don't know how to code!![banner](https://user-images.githubusercontent.com/93240515/181876695-978b5c1b-3427-4208-8992-b071aa61bc2f.png)
 
 # Setup Guide
 
