@@ -34,11 +34,6 @@ clear()
 os.system("pip install httpx")
 clear()
 
-def libs():
-    print("remember to add libs retard")
-
-libs()
-
 print("Library installation finished, continuing.")
 
 red = 0xFF0000
